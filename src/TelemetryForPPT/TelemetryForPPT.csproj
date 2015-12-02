@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.Settings.targets" Condition="'$(RazzleToolPath)'!=''" />
+  <Import Project="..\ProPowerTools.Settings.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4334F78E-A249-4150-AE73-E99008DB44A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.VisualStudio.TelemetryForPPT</RootNamespace>
+    <AssemblyName>Microsoft.VisualStudio.TelemetryForPPT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName />
+    <SccLocalPath />
+    <SccAuxPath />
+    <SccProvider />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" Condition="'$(RazzleBuild)'==''" />
+    <Compile Include="DefaultImpl\DefaultTelemetryActivity.cs" />
+    <Compile Include="DefaultImpl\DefaultTelemetrySession.cs" />
+    <Compile Include="DefaultImpl\DefaultTelemetrySessionFactory.cs" />
+    <Compile Include="Def\ITelemetryActivity.cs" />
+    <Compile Include="Def\ITelemetrySession.cs" />
+    <Compile Include="Def\ITelemetrySessionFactory.cs" />
+    <Compile Include="TelemetrySessionForPPT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.targets" Condition="'$(RazzleToolPath)'!=''" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="'$(RazzleBuild)'==''" />
+</Project>

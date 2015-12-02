@@ -1,0 +1,18 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Import the settings-->
+  <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.Native.Settings.targets" />
+  <PropertyGroup>
+    <BuildProjectReferences>true</BuildProjectReferences>
+  </PropertyGroup>
+  <!--Leaf project Properties-->
+  <!--Leaf Project Items-->
+  <!--The following projects will build during PHASE 1-->
+  <ItemGroup Condition="'$(BuildExePhase)' == '1'">
+  </ItemGroup>
+  <!--The following projects will build during the default PHASE-->
+  <ItemGroup Condition="'$(BuildExePhase)' == ''">
+    <ProjectFile Include="CopyAsHtml\CopyAsHtml.csproj" />
+  </ItemGroup>
+  <!--Import the targets-->
+  <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.Traversal.targets" />
+</Project>

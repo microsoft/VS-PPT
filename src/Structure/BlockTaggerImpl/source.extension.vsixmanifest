@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+    <Identifier Id="BlockTaggerImpl.dpugh.fb06e31c-ecc3-4aed-b1a0-3d04beb0cc30">
+        <Name>BlockTaggerImpl</Name>
+        <Author>dpugh</Author>
+        <Version>2.2</Version>
+        <Description xml:space="preserve">This is an implementation of a BlockTagger forC/C++,  C# and VB.</Description>
+        <Locale>1033</Locale>
+        <MoreInfoUrl> http://visualstudiogallery.msdn.microsoft.com/en-us/0367762e-d26e-4909-92e2-b1f001233c20</MoreInfoUrl>
+        <SupportedProducts>
+            <VisualStudio Version="11.0">
+                <Edition>Ultimate</Edition>
+                <Edition>Premium</Edition>
+                <Edition>Pro</Edition>
+            </VisualStudio>
+            <VisualStudio Version="11.0">
+                <Edition>Ultimate</Edition>
+                <Edition>Premium</Edition>
+                <Edition>Pro</Edition>
+            </VisualStudio>
+        </SupportedProducts>
+        <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    </Identifier>
+    <References />
+    <Content>
+        <MefComponent>|%CurrentProject%|</MefComponent>
+    </Content>
+</Vsix>

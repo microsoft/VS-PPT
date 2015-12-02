@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidPeekF1Pkg">
+    <Groups>
+      <Group guid="guidPeekF1CmdSet" id="PeekF1CommandGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT"/>
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidPeekF1CmdSet" id="cmdidPeekHelp" priority="0x0100" type="Button">
+        <Parent guid="guidPeekF1CmdSet" id="PeekF1CommandGroup" />
+        <CommandFlag>CommandWellOnly</CommandFlag>
+        <Strings>
+          <ButtonText>Peek Help</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  <CommandPlacements>
+    <CommandPlacement guid="guidPeekF1CmdSet" id="cmdidPeekHelp" priority="0x0080">
+      <Parent guid="guidSHLMainMenu" id="IDG_VS_CODEWIN_NAVIGATETOLOCATION"/>
+    </CommandPlacement>
+  </CommandPlacements>
+  <KeyBindings>
+    <KeyBinding guid="guidPeekF1CmdSet" id="cmdidPeekHelp" editor="GUID_TextEditorFactory" key1="VK_F1" mod1="Alt"/>
+  </KeyBindings>
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidPeekF1Pkg" value="{1b797723-54ad-4029-ac39-fab88b204891}" />
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidPeekF1CmdSet" value="{7593cd3c-ef01-4047-bdcf-b61fab9d1ad8}">
+      <IDSymbol name="PeekF1CommandGroup" value="0x1020" />
+      <IDSymbol name="cmdidPeekHelp" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
