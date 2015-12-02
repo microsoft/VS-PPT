@@ -1,0 +1,7 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="VSCTCompile" Inputs="@(VSCTCompile)" Outputs="@(VSCTCompile->'$(IntermediateOutputPath)%(Filename).cto')" Condition="'@(VSCTCompile)' != ''">
+    <Exec Command="$(VSCTCommand) -nologo $(CtcAdditionalOptions) %(VSCTCompile.Identity) @(VSCTCompile->'$(IntermediateOutputPath)%(Filename).cto') /D__CTC__ /I&quot;$(VSCommonIncPath)&quot; /I&quot;$(ExtOfficeIncPath)&quot;" />
+  </Target>
+ 
+</Project>

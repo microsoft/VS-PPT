@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guid_CopyAsHtml">
+
+    <Buttons>
+      <Button guid="guidCopyAsHtmlCmdSet" id="cmdidCopyHtmlMarkup" priority="0x0400" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_EDIT_CUTCOPY" />
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Copy &amp;Html Markup</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guid_CopyAsHtml" value="{61684dba-41b3-404f-be62-f4e6dd74c18b}" />
+    <GuidSymbol name="guidCopyAsHtmlCmdSet" value="{9103a42b-9b65-4d63-b852-577056db412f}">
+      <IDSymbol name="cmdidCopyHtmlMarkup" value="0x100" />
+    </GuidSymbol>
+  </Symbols>
+
+</CommandTable>

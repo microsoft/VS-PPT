@@ -1,0 +1,1 @@
+%~dp0\..\tools\CodeFormatter\CodeFormatter.exe %~dp0\..\ProPowerTools.Open.sln /nocopyright

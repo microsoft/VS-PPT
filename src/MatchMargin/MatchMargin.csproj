@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.Settings.targets" Condition="'$(RazzleToolPath)'!=''" />
+  <Import Project="..\ProPowerTools.Settings.targets" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{4133D566-F45A-4E14-94E1-305E244A8671}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.VisualStudio.PowerTools.MatchMargin</RootNamespace>
+    <AssemblyName>Microsoft.VisualStudio.PowerTools.MatchMargin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RazzleBuild)' == '' and '$(ProPowerToolsPackage)' == ''">
+    <!-- We only want to deploy the package if we're being built in Visual Studio (not in Razzle),
+         and if we're being built standalone (not as a part of the Pro Power Tools package). -->
+    <CreateVsixContainer>true</CreateVsixContainer>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <DeployExtension>true</DeployExtension>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.CoreUtility">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Data">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Logic">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.UI">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>False</Private>
+      <SpecificVersion>false</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MatchMargin.cs" />
+    <Compile Include="MatchMarginElement.cs" />
+    <Compile Include="MatchMarginFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="MatchMarginColors.pkgdef">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Strings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.targets" Condition="'$(RazzleToolPath)'!=''" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="'$(RazzleBuild)'==''" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" />
+</Project>

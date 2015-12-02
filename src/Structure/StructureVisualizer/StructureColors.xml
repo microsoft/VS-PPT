@@ -1,0 +1,106 @@
+<Themes>
+  <Theme Name="HighContrast" GUID="{a5c004b4-2d4b-494e-bf01-45fc492522c7}">
+    <Category Name="StructureVisualizer colors" GUID="{75a05685-00a8-4ded-bae5-e7a50bfa929a}">
+      <Color Name="BlockStructureClass">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureConditional">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureLoop">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureMethod">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureUnknown">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureToolTipClass">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureToolTipConditional">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureToolTipLoop">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureToolTipMethod">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="BlockStructureToolTipUnknown">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+      <Color Name="ScrollBarMethodHighlight">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000016" />
+      </Color>
+      <Color Name="MethodSeparator">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_SYSCOLOR" Source="00000008" />
+      </Color>
+    </Category>
+  </Theme>
+  <Theme Name="Dark" GUID="{1ded0138-47ce-435e-84ef-9ec1f439b749}">
+    <Category Name="StructureVisualizer colors" GUID="{75a05685-00a8-4ded-bae5-e7a50bfa929a}">
+      <Color Name="BlockStructureClass">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF135647" />
+      </Color>
+      <Color Name="BlockStructureConditional">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF163F1B" />
+      </Color>
+      <Color Name="BlockStructureLoop">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF472060" />
+      </Color>
+      <Color Name="BlockStructureMethod">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF133856" />
+      </Color>
+      <Color Name="BlockStructureUnknown">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF4C4C4C" />
+      </Color>
+      <Color Name="BlockStructureToolTipClass">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FFC0C0C0" />
+      </Color>
+      <Color Name="BlockStructureToolTipConditional">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF7CCC87" />
+      </Color>
+      <Color Name="BlockStructureToolTipLoop">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF9F6EBF" />
+      </Color>
+      <Color Name="BlockStructureToolTipMethod">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF569CD6" />
+      </Color>
+      <Color Name="BlockStructureToolTipUnknown">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF808080" />
+      </Color>
+      <Color Name="ScrollBarMethodHighlight">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF133856" />
+      </Color>
+      <Color Name="MethodSeparator">
+        <Background Type="CT_AUTOMATIC" Source="00000000" />
+        <Foreground Type="CT_RAW" Source="FF4C4C4C" />
+      </Color>
+    </Category>
+  </Theme>
+</Themes>
