@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="FixMixedTabs.InformationBarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="800">
+    <Border BorderBrush="Silver" BorderThickness="0,0,0,2">
+        <DockPanel Background="Gainsboro" LastChildFill="False">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" DockPanel.Dock="Right">
+                <Button Name="Tabify" Margin="5,0,0,0" Width="65" Height="22">Tabify</Button>
+                <Button Name="Untabify" Margin="5,0,0,0" Width="65" Height="22">Untabify</Button>
+                <Border Padding="15,0,0,0" />
+                <Button Name="DontShowAgain" Margin="5,0,0,0" Padding="5,0,5,0" Height="22">Don't show again</Button>
+                <Button Name="Hide" BorderBrush="Transparent" Background="Transparent" Margin="8,5,4.5,0" VerticalAlignment="Top" Width="16" Height="16" DockPanel.Dock="Right" ToolTip="Ignore for now">
+                    <Path Name="Path" Stretch="Fill" StrokeThickness="0.5" Stroke="#FF333333" Fill="#FF969696" Data="F1 M 2.28484e-007,1.33331L 1.33333,0L 4.00001,2.66669L 6.66667,6.10352e-005L 8,1.33331L 5.33334,4L 8,6.66669L 6.66667,8L 4,5.33331L 1.33333,8L 1.086e-007,6.66669L 2.66667,4L 2.28484e-007,1.33331 Z " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Button>
+            </StackPanel>
+            <TextBlock Margin="5,0,0,0" TextOptions.TextFormattingMode="Display" VerticalAlignment="Center" FontWeight="Bold" DockPanel.Dock="Left">You have mixed tabs and spaces.  Fix this?</TextBlock>
+        </DockPanel>
+    </Border>
+</UserControl>

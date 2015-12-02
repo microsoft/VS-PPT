@@ -1,0 +1,60 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VSToolsPath Condition="'$(VSToolsPath)' == '' and '$(RazzleBuild)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(RazzleBuild)' != ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0</VSToolsPath>
+    <ProPowerToolsOutputPath>$(BinariesDirectory)\bin\$(BuildArchitecture)\ProPowerTools</ProPowerToolsOutputPath>
+    <OutputPath>$(ProPowerToolsOutputPath)</OutputPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+
+    <!-- In order to reference Microsoft.VisualStudio.CSharp.Services.Language.Interop.dll, we need to add
+         $(DevEnvDir) to the assembly search path.  This search path is only necessary
+         for building within Visual Studio.  When building from Razzle, this assembly is found from the
+         InternalApis. -->
+    <ReferencePath Condition="'$(RazzleBuild)' == ''">$(DevEnvDir)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UseCodebase>true</UseCodebase>
+    <DeployExtension>false</DeployExtension>
+    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''" >14.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RazzleBuild)' != ''">
+    <!-- By default, do not create VSIX containers in Razzle.  Doing so copies the same extension.vsixmanifest
+         to the output directory for each extension.  Only the vsixmanifest for the release should be output when
+         built from Razzle -->
+    <CreateVsixContainer>false</CreateVsixContainer>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(BuildType)' == 'Checked') Or ('$(BuildType)' == 'Debug') Or ('$(Configuration)' == 'Debug')">
+    <Optimize>false</Optimize>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RazzleBuild)'==''">
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <vsFrameworkLatest>Microsoft.VisualStudio.Shell.14.0</vsFrameworkLatest>
+    <VsMajorVersion>14</VsMajorVersion>
+    <VsMinorVersion>0</VsMinorVersion>
+    <BuildNumberMajor>0</BuildNumberMajor>
+    <BuildNumberMinor>0</BuildNumberMinor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RazzleBuild)'=='' and '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(RazzleBuild)'=='' and '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+</Project>
