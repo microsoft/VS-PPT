@@ -11,7 +11,11 @@ Install the latest official build of Productivity Power Tools for Visual Studio 
 * [Building, testing and debugging the sources](...)
 
 ### Get started
-* [Roadmap](...) 
+* [Overview](https://github.com/Microsoft/VS-PPT/wiki/Overview)
+* [Roadmap](https://github.com/Microsoft/VS-PPT/wiki/Roadmap)
+* Also take a look at our [Wiki](https://github.com/Microsoft/VS-PPT/wiki) for more information.
 
 ### Contribute!
-...
+
+* [How to Contribute](https://github.com/Microsoft/VS-PPT/wiki/Contributing-Code)
+* [Pull requests](https://github.com/Microsoft/VS-PPT/pulls): [Open](https://github.com/Microsoft/VS-PPT/pulls?q=is%3Aopen+is%3Apr)/[Closed](https://github.com/Microsoft/VS-PPT/pulls?q=is%3Apr+is%3Aclosed)
