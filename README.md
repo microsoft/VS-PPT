@@ -1,5 +1,5 @@
 # Visual Studio Productivity Power Tools
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](http://aka.ms/ihb37w)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](http://aka.ms/a3wtsx)
 
 Productivity Power Tools is a set of Visual Studio extensions improving developer productivity.
 
