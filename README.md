@@ -8,7 +8,7 @@ Install the latest official build of Productivity Power Tools for Visual Studio 
 
 ### Source code
 * Clone the sources: `git clone https://github.com/Microsoft/VS-PPT.git`
-* [Building, testing and debugging the sources](...)
+* [Building, testing and debugging the sources](https://github.com/Microsoft/VS-PPT/wiki/Building,-testing-and-debugging-the-sources)
 
 ### Get started
 * [Overview](https://github.com/Microsoft/VS-PPT/wiki/Overview)
