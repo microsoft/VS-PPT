@@ -9,6 +9,7 @@ Install the latest official build of Productivity Power Tools for Visual Studio 
 ### Source code
 * Clone the sources: `git clone https://github.com/Microsoft/VS-PPT.git`
 * [Building, testing and debugging the sources](https://github.com/Microsoft/VS-PPT/wiki/Building,-testing-and-debugging-the-sources)
+* The source code in this repo is licensed under the terms of the [MIT license (Microsoft OSS)](https://github.com/Microsoft/VS-PPT/blob/master/license.txt)
 
 ### Get started
 * [Overview](https://github.com/Microsoft/VS-PPT/wiki/Overview)
