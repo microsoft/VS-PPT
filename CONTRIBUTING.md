@@ -6,7 +6,7 @@ The Productivity Power Tools project follows the [.NET Framework developer guide
 
 Here are the rules on pull requests:
 
-* Contributions beyond the level of a bug fix are currently reserved for Microsoft PPT members or they will be declined. As our process matures and our experience grows, the team expects to take larger contributions.
+* Contributions beyond the level of a bug fix are reserved for Microsoft PPT members or they will be declined.
 * Only contributions against the master branch will be accepted. Authors submitting pull requests that target experimental feature branches or release branches will likely be asked target their pull request at the master branch.
 * Pull requests that do not merge easily with the tip of the master branch will be declined. The author will be asked to merge with tip and update the pull request.
 * Submissions must meet functional and performance expectations, including scenarios for which the team doesn’t yet have open source tests. This means you may be asked to fix and resubmit your pull request against a new open test case if it fails one of these tests.
