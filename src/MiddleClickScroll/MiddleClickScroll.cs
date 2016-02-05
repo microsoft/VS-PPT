@@ -1,4 +1,5 @@
-﻿namespace Microsoft.PowerTools.MiddleClickScroll
+﻿
+namespace Microsoft.PowerTools.MiddleClickScroll
 {
     using System;
     using System.Diagnostics;
@@ -13,11 +14,11 @@
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Formatting;
 
-    sealed class MiddleClickScroll : MouseProcessorBase
+    internal sealed class MiddleClickScroll : MouseProcessorBase
     {
         public static IMouseProcessor Create(IWpfTextView view, ITelemetrySession telemetrySession)
         {
-            return view.Properties.GetOrCreateSingletonProperty(delegate() { return new MiddleClickScroll(view, telemetrySession); });
+            return view.Properties.GetOrCreateSingletonProperty(delegate () { return new MiddleClickScroll(view, telemetrySession); });
         }
 
         private IWpfTextView _view;
@@ -30,9 +31,9 @@
         private bool _dismissOnMouseUp;
         private readonly ITelemetrySession _telemetrySession;
 
-        const double minMove = 10.0;
-        const double minTime = 25.0;
-        const double moveDivisor = 200.0;
+        private const double minMove = 10.0;
+        private const double minTime = 25.0;
+        private const double moveDivisor = 200.0;
 
         private MiddleClickScroll(IWpfTextView view, ITelemetrySession telemetrySession)
         {
@@ -44,7 +45,7 @@
             _view.VisualElement.IsVisibleChanged += OnIsVisibleChanged;
         }
 
-        void OnIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void OnIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (!_view.VisualElement.IsVisible)
             {
@@ -52,14 +53,14 @@
             }
         }
 
-        void OnClosed(object sender, EventArgs e)
+        private void OnClosed(object sender, EventArgs e)
         {
             this.StopScrolling();
 
             _view.VisualElement.IsVisibleChanged -= OnIsVisibleChanged;
             _view.Closed -= OnClosed;
         }
-        
+
         // These methods get called for the entire mouse processing chain before calling PreprocessMouseDown
         // (& there is not an equivalent for PreprocessMouseMiddleButtonDown)
         public override void PreprocessMouseLeftButtonDown(MouseButtonEventArgs e)
@@ -221,7 +222,7 @@
         }
     }
 
-    static class User32
+    internal static class User32
     {
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
         public static extern IntPtr LoadImage(IntPtr hinst, IntPtr lpszName, uint uType, int cxDesired, int cyDesired, uint fuLoad);
