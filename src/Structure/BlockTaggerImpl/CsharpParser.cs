@@ -52,7 +52,6 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
                     {
                         ParseSyntaxNode(snapshot, childnode, parentCodeBlockNode, token, level);
                     }
-
                 }
             }
         }

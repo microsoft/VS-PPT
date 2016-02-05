@@ -1,4 +1,5 @@
-﻿namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
+﻿
+namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
 {
     internal class CppParser : BraceParser
     {
