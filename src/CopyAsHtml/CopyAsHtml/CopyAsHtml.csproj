@@ -91,6 +91,12 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\OptionsPage\OptionsPage.csproj">
+      <Project>{B24C54B8-AE03-4547-823A-7F6C2E79739B}</Project>
+      <Name>OptionsPage</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3bPkgdefProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\..\TelemetryForPPT\TelemetryForPPT.csproj">
       <Project>{4334f78e-a249-4150-ae73-e99008db44a7}</Project>
       <Name>TelemetryForPPT</Name>
