@@ -94,7 +94,7 @@ EndSelection:<<<<<<<4
 ";
 
             string pre =
-    @"<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"">
+    @"<!DOCTYPE html>
 <HTML><HEAD><TITLE>Snippet</TITLE></HEAD><BODY><!--StartFragment-->";
 
             string post = @"<!--EndFragment--></BODY></HTML>";
