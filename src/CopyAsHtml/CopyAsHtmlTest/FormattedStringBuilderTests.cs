@@ -21,7 +21,8 @@ namespace CopyAsHtmlTest
             var formattedStringBuilder = new FormattedStringBuilder(
                 htmlMarkupProvider,
                 classifier,
-                MockClassificationType.Default);
+                MockClassificationType.Default,
+                waitIndicator: null);
 
             var snapshot = new MockTextSnapshot("bla");
             var spans = new NormalizedSnapshotSpanCollection(new [] 
