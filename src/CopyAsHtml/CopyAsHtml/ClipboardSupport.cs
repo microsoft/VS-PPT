@@ -8,7 +8,7 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
 {
     /// <summary>
     /// Adds support for placing data on Clipboard in HTML format.
-    /// Deals with the weirdness of the HTML format and some 
+    /// Deals with the weirdness of the HTML format and some
     /// implementation details.
     /// Preserves other existing formats on clipboard (just adds the HTML format).
     /// </summary>
@@ -79,7 +79,7 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
             // Builds the CF_HTML header. See format specification here:
             // http://msdn.microsoft.com/library/default.asp?url=/workshop/networking/clipboard/htmlclipboard.asp
 
-            // The string contains index references to other spots in the string, so we need placeholders so we can compute the offsets. 
+            // The string contains index references to other spots in the string, so we need placeholders so we can compute the offsets.
             // The <<<<<<<_ strings are just placeholders. We'll backpatch them actual values afterwards.
             // The string layout (<<<) also ensures that it can't appear in the body of the html because the <
             // character must be escaped.
@@ -95,7 +95,7 @@ EndSelection:<<<<<<<4
 
             string pre =
     @"<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"">
-<HTML><HEAD><TITLE>Snippet</TITLE></HEAD><BODY><!--StartFragment-->";
+<HTML><HEAD><meta charset=""UTF-8""><TITLE>Snippet</TITLE></HEAD><BODY><!--StartFragment-->";
 
             string post = @"<!--EndFragment--></BODY></HTML>";
 
