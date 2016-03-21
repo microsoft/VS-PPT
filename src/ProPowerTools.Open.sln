@@ -40,6 +40,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structure Visualizer", "Str
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleClickScroll", "MiddleClickScroll\MiddleClickScroll.csproj", "{EB4E0065-033F-4C44-B5C4-071C799FD931}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyAsHtmlTest", "CopyAsHtml\CopyAsHtmlTest\CopyAsHtmlTest.csproj", "{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -106,6 +108,10 @@ Global
 		{EB4E0065-033F-4C44-B5C4-071C799FD931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB4E0065-033F-4C44-B5C4-071C799FD931}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB4E0065-033F-4C44-B5C4-071C799FD931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -119,5 +125,6 @@ Global
 		{1D7797BF-228B-4B3E-A1FA-9FB159E6CBDD} = {07322017-A09B-4948-8F0D-D8F359114AA3}
 		{38B9DE75-1DC7-4874-BFC7-7C6782E208F7} = {07322017-A09B-4948-8F0D-D8F359114AA3}
 		{E53E2E8A-8975-43EA-BDCC-8966AE402520} = {9EFF13ED-05C5-4F68-A9BE-750125FFDF41}
+		{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49} = {9EFF13ED-05C5-4F68-A9BE-750125FFDF41}
 	EndGlobalSection
 EndGlobal
