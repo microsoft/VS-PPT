@@ -42,6 +42,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleClickScroll", "Middle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyAsHtmlTest", "CopyAsHtml\CopyAsHtmlTest\CopyAsHtmlTest.csproj", "{EBF2DB98-AFE4-44AD-BC37-1C81F27F4A49}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D297CBEC-3464-4240-AFFE-D08302E816CF}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
