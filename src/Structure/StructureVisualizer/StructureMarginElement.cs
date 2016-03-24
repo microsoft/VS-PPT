@@ -45,7 +45,7 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
         /// </summary>
         /// <param name="textView">ITextView to which this StructureMargenElement will be attacheded.</param>
         /// <param name="verticalScrollbar">Vertical scrollbar of the ITextViewHost that contains <paramref name="textView"/>.</param>
-        /// <param name="tagFactory">MEF tag factory.</param>
+        /// <param name="factory">MEF tag factory.</param>
         public StructureMarginElement(IWpfTextView textView, IVerticalScrollBar verticalScrollbar, StructureMarginFactory factory)
         {
             _textView = textView;
