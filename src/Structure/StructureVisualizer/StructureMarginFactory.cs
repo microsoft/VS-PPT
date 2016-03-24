@@ -27,7 +27,7 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
         /// Create an instance of the StructureMargin in the specified <see cref="IWpfTextViewHost"/>.
         /// </summary>
         /// <param name="textViewHost">The <see cref="IWpfTextViewHost"/> in which the StructureMargin will be displayed.</param>
-        /// <param name="parentMargin">The scrollBar used to translate between buffer positions and y-coordinates.</param>
+        /// <param name="containerMargin">The scrollBar used to translate between buffer positions and y-coordinates.</param>
         /// <returns>The newly created StructureMargin.</returns>
         public IWpfTextViewMargin CreateMargin(IWpfTextViewHost textViewHost, IWpfTextViewMargin containerMargin)
         {
