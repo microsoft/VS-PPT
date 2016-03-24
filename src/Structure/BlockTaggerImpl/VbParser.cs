@@ -15,25 +15,46 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
 
         private BlockType FindType(SyntaxKind kind)
         {
-            if (kind == SyntaxKind.ForBlock || kind == SyntaxKind.ForEachBlock || kind == SyntaxKind.WhileBlock ||
-                kind == SyntaxKind.SimpleDoLoopBlock || kind == SyntaxKind.DoLoopUntilBlock || kind == SyntaxKind.DoLoopWhileBlock ||
-                kind == SyntaxKind.DoUntilLoopBlock || kind == SyntaxKind.DoWhileLoopBlock)
-                return BlockType.Loop;
-            else if (kind == SyntaxKind.MultiLineIfBlock || kind == SyntaxKind.ElseBlock || kind == SyntaxKind.ElseIfBlock ||
-                     kind == SyntaxKind.SelectBlock || kind == SyntaxKind.CaseBlock || kind == SyntaxKind.CaseElseBlock ||
-                     kind == SyntaxKind.TryBlock || kind == SyntaxKind.CatchBlock || kind == SyntaxKind.FinallyBlock)
-                return BlockType.Conditional;
-            else if (kind == SyntaxKind.ClassBlock || kind == SyntaxKind.InterfaceBlock || kind == SyntaxKind.StructureBlock ||
-                     kind == SyntaxKind.ModuleBlock || kind == SyntaxKind.EnumBlock)
-                return BlockType.Class;
-            else if (kind == SyntaxKind.NamespaceBlock)
-                return BlockType.Namespace;
-            else if (kind == SyntaxKind.SubBlock || kind == SyntaxKind.FunctionBlock || kind == SyntaxKind.PropertyBlock ||
-                     kind == SyntaxKind.SyncLockBlock || kind == SyntaxKind.UsingBlock ||
-                     kind == SyntaxKind.GetAccessorBlock || kind == SyntaxKind.SetAccessorBlock)
-                return BlockType.Method;
-            else
-                return BlockType.Unknown;
+            switch (kind)
+            {
+                case SyntaxKind.ForBlock:
+                case SyntaxKind.ForEachBlock:
+                case SyntaxKind.WhileBlock:
+                case SyntaxKind.SimpleDoLoopBlock:
+                case SyntaxKind.DoLoopUntilBlock:
+                case SyntaxKind.DoLoopWhileBlock:
+                case SyntaxKind.DoUntilLoopBlock:
+                case SyntaxKind.DoWhileLoopBlock:
+                    return BlockType.Loop;
+                case SyntaxKind.MultiLineIfBlock:
+                case SyntaxKind.ElseBlock:
+                case SyntaxKind.ElseIfBlock:
+                case SyntaxKind.SelectBlock:
+                case SyntaxKind.CaseBlock:
+                case SyntaxKind.CaseElseBlock:
+                case SyntaxKind.TryBlock:
+                case SyntaxKind.CatchBlock:
+                case SyntaxKind.FinallyBlock:
+                    return BlockType.Conditional;
+                case SyntaxKind.ClassBlock:
+                case SyntaxKind.InterfaceBlock:
+                case SyntaxKind.StructureBlock:
+                case SyntaxKind.ModuleBlock:
+                case SyntaxKind.EnumBlock:
+                    return BlockType.Class;
+                case SyntaxKind.NamespaceBlock:
+                    return BlockType.Namespace;
+                case SyntaxKind.SubBlock:
+                case SyntaxKind.FunctionBlock:
+                case SyntaxKind.PropertyBlock:
+                case SyntaxKind.SyncLockBlock:
+                case SyntaxKind.UsingBlock:
+                case SyntaxKind.GetAccessorBlock:
+                case SyntaxKind.SetAccessorBlock:
+                    return BlockType.Method;
+                default:
+                    return BlockType.Unknown;
+            }
         }
 
         protected override void ParseSyntaxNode(ITextSnapshot snapshot, SyntaxNode parentSyntaxNode, CodeBlock parentCodeBlockNode, CancellationToken token, int level)
