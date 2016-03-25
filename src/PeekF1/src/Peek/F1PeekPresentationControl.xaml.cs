@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.OLE.Interop;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace Microsoft.VisualStudio.Editor.PeekF1
 {

@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.TelemetryForPPT;
 using Microsoft.VisualStudio.Text.Editor;
-using System;
 using System.Runtime.InteropServices;
 
 namespace Microsoft.VisualStudio.PowerTools.OptionsPage

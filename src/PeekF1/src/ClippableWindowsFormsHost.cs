@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.PlatformUI;
 using Microsoft.VisualStudio.Text.Editor;
 using System;
-using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Forms.Integration;
 using System.Windows.Interop;
