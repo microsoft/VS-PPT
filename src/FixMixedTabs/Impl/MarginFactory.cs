@@ -18,16 +18,16 @@ namespace FixMixedTabs
     internal sealed class MarginFactory : IWpfTextViewMarginProvider
     {
         [Import]
-        private ITextDocumentFactoryService _TextDocumentFactoryService = null;
-        [Import]
+        private ITextDocumentFactoryService _TextDocumentFactoryService;
 
-        private IEditorOperationsFactoryService _OperationsFactory = null;
         [Import]
+        private IEditorOperationsFactoryService _OperationsFactory;
 
-        private ITextUndoHistoryRegistry _UndoHistoryRegistry = null;
         [Import]
+        private ITextUndoHistoryRegistry _UndoHistoryRegistry;
 
-        private SVsServiceProvider _serviceProvider = null;
+        [Import]
+        private SVsServiceProvider _serviceProvider;
 
         public IWpfTextViewMargin CreateMargin(IWpfTextViewHost textViewHost, IWpfTextViewMargin containerMargin)
         {

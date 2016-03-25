@@ -71,7 +71,7 @@ namespace Microsoft.VisualStudio.PowerTools.TimeStampMargin
         public static readonly XmlLanguage EnUsLanguage = XmlLanguage.GetLanguage("en-US");
 
         private readonly IWpfTextView _textView;
-        private bool _isDisposed = false;
+        private bool _isDisposed;
         private bool _showMilliseconds;
         private bool _showHours;
         private readonly MarginFactory _factory;

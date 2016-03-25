@@ -63,18 +63,18 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
         private readonly IEditorFormatMap _editorFormatMap;
         private readonly IVerticalScrollBar _scrollBar;
 
-        private BackgroundSearch _search = null;
-        private string _highlight = null;
-        private SnapshotSpan? _highlightSpan = null;
+        private BackgroundSearch _search;
+        private string _highlight;
+        private SnapshotSpan? _highlightSpan;
 
         private Brush _marginMatchBrush;
         private Brush _adornmentMatchBrush;
 
-        private bool _hasEvents = false;
-        private bool _optionsChanging = false;
-        private bool _isMarginEnabled = false;
-        private bool _areAdornmentsEnabled = false;
-        private bool _isDisposed = false;
+        private bool _hasEvents;
+        private bool _optionsChanging;
+        private bool _isMarginEnabled;
+        private bool _areAdornmentsEnabled;
+        private bool _isDisposed;
         private const double MarkPadding = 1.0;
         private const double MarkThickness = 4.0;
 
@@ -568,7 +568,7 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
         /// </summary>
         private class BackgroundSearch
         {
-            private bool _abort = false;
+            private bool _abort;
             private static List<SnapshotSpan> s_emptyList = new List<SnapshotSpan>(0);
             private IList<SnapshotSpan> _matches = s_emptyList;
             public readonly ITextSnapshot Snapshot;

@@ -16,7 +16,7 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
 
         #region Private Members
         private MatchMarginElement _matchMarginElement;
-        private bool _isDisposed = false;
+        private bool _isDisposed;
         #endregion
 
         /// <summary>
