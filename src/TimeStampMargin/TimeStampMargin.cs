@@ -370,10 +370,10 @@ namespace Microsoft.VisualStudio.PowerTools.TimeStampMargin
         #region IWpfTextViewMargin Members
 
         /// <summary>
-        /// The <see cref="Sytem.Windows.FrameworkElement"/> that implements the visual representation
+        /// The <see cref="System.Windows.FrameworkElement"/> that implements the visual representation
         /// of the margin.
         /// </summary>
-        public System.Windows.FrameworkElement VisualElement
+        public FrameworkElement VisualElement
         {
             // Since this margin implements Canvas, this is the object which renders
             // the margin.
