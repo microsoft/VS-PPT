@@ -265,7 +265,7 @@ namespace FixMixedTabs
 
         public ITextViewMargin GetTextViewMargin(string marginName)
         {
-            return (marginName == InformationBarMargin.MarginName) ? (IWpfTextViewMargin)this : null;
+            return marginName == MarginName ? this : null;
         }
 
         public void Dispose()

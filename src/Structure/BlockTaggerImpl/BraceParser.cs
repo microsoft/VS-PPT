@@ -285,8 +285,8 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
         {
             int index = text.IndexOf(p, StringComparison.Ordinal);
             return (index >= 0) &&
-                   ((index == 0) || (!char.IsLetterOrDigit(text[index - 1]))) &&
-                   ((index + p.Length == text.Length) || (!char.IsLetterOrDigit(text[index + p.Length])));
+                   ((index == 0) || !char.IsLetterOrDigit(text[index - 1])) &&
+                   ((index + p.Length == text.Length) || !char.IsLetterOrDigit(text[index + p.Length]));
         }
     }
 }

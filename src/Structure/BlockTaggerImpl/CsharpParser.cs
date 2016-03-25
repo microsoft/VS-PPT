@@ -42,7 +42,7 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
                     }
                     else if (TryAsBlock(childnode, parentSyntaxNode, ref type, ref startPosition, ref endPosition))
                     {
-                        int statementStart = (type == BlockType.Unknown) ? startPosition : parentSyntaxNode.SpanStart;
+                        int statementStart = type == BlockType.Unknown ? startPosition : parentSyntaxNode.SpanStart;
                         string statement = StatementFromSpan(snapshot, statementStart, startPosition);
 
                         CodeBlock child = new CodeBlock(parentCodeBlockNode, type, statement, new SnapshotSpan(snapshot, Span.FromBounds(startPosition, endPosition)), statementStart, level + 1);

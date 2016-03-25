@@ -559,7 +559,7 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
         private void DrawMark(DrawingContext drawingContext, Brush brush, double y)
         {
             drawingContext.DrawRectangle(brush, null,
-                                         new Rect(MarkPadding, y - (MarkThickness * 0.5), this.Width - MarkPadding * 2.0, MarkThickness));
+                                         new Rect(MarkPadding, y - MarkThickness * 0.5, this.Width - MarkPadding * 2.0, MarkThickness));
         }
 
         /// <summary>
