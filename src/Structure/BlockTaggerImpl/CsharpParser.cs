@@ -58,24 +58,38 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
 
         private static BlockType FindType(SyntaxKind kind)
         {
-            if (kind == SyntaxKind.ForEachStatement || kind == SyntaxKind.ForStatement ||
-                kind == SyntaxKind.WhileStatement || kind == SyntaxKind.DoStatement)
-                return BlockType.Loop;
-            else if (kind == SyntaxKind.IfStatement || kind == SyntaxKind.ElseClause || kind == SyntaxKind.SwitchStatement)
-                return BlockType.Conditional;
-            else if (kind == SyntaxKind.ClassDeclaration || kind == SyntaxKind.InterfaceDeclaration ||
-                     kind == SyntaxKind.StructDeclaration || kind == SyntaxKind.EnumDeclaration)
-                return BlockType.Class;
-            else if (kind == SyntaxKind.NamespaceDeclaration)
-                return BlockType.Namespace;
-            else if (kind == SyntaxKind.MethodDeclaration || kind == SyntaxKind.PropertyDeclaration ||
-                     kind == SyntaxKind.GetAccessorDeclaration || kind == SyntaxKind.SetAccessorDeclaration ||
-                     kind == SyntaxKind.ParenthesizedLambdaExpression)
-                return BlockType.Method;
-            else if (kind == SyntaxKind.TryStatement || kind == SyntaxKind.CatchClause || kind == SyntaxKind.FinallyClause || kind == SyntaxKind.LockStatement)
-                return BlockType.Other;
-            else
-                return BlockType.Unknown;
+            switch (kind)
+            {
+                case SyntaxKind.ForEachStatement:
+                case SyntaxKind.ForStatement:
+                case SyntaxKind.WhileStatement:
+                case SyntaxKind.DoStatement:
+                    return BlockType.Loop;
+                case SyntaxKind.IfStatement:
+                case SyntaxKind.ElseClause:
+                case SyntaxKind.SwitchStatement:
+                    return BlockType.Conditional;
+                case SyntaxKind.ClassDeclaration:
+                case SyntaxKind.InterfaceDeclaration:
+                case SyntaxKind.StructDeclaration:
+                case SyntaxKind.EnumDeclaration:
+                    return BlockType.Class;
+                case SyntaxKind.NamespaceDeclaration:
+                    return BlockType.Namespace;
+                case SyntaxKind.MethodDeclaration:
+                case SyntaxKind.PropertyDeclaration:
+                case SyntaxKind.GetAccessorDeclaration:
+                case SyntaxKind.SetAccessorDeclaration:
+                case SyntaxKind.ParenthesizedLambdaExpression:
+                    return BlockType.Method;
+                case SyntaxKind.TryStatement:
+                case SyntaxKind.CatchClause:
+                case SyntaxKind.FinallyClause:
+                case SyntaxKind.LockStatement:
+                    return BlockType.Other;
+                default:
+                    return BlockType.Unknown;
+            }
         }
 
         private bool TryAsNamespace(SyntaxNode childnode, ref BlockType type, ref int startPosition, ref int endPosition)
