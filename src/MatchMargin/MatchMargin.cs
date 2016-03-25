@@ -23,8 +23,6 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
         /// Constructor for the MatchMargin.
         /// </summary>
         /// <param name="textViewHost">The IWpfTextViewHost in which this margin will be displayed.</param>
-        /// <param name="navigator">Instance of an ITextStructureNavigator used to define words in the host's TextView. Created from the
-        /// ITextStructureNavigatorFactory service.</param>
         public MatchMargin(IWpfTextViewHost textViewHost, IVerticalScrollBar scrollBar, MatchMarginFactory factory)
         {
             // Validate
