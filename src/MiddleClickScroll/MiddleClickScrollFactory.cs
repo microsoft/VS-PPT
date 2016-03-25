@@ -3,8 +3,8 @@ namespace Microsoft.PowerTools.MiddleClickScroll
 {
     using System.ComponentModel.Composition;
     using VisualStudio.TelemetryForPPT;
-    using Microsoft.VisualStudio.Text.Editor;
-    using Microsoft.VisualStudio.Utilities;
+    using VisualStudio.Text.Editor;
+    using VisualStudio.Utilities;
 
     [Export(typeof(IMouseProcessorProvider))]
     [Name("MiddleClickScroll")]
