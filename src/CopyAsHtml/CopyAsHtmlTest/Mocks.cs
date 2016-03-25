@@ -15,7 +15,7 @@ namespace CopyAsHtmlTest
 
         public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
         {
-            return new List<ClassificationSpan>()
+            return new List<ClassificationSpan>
                 {
                     new ClassificationSpan(
                         new SnapshotSpan(
