@@ -8,7 +8,7 @@ before_build:
   #- ps: Vsix-TokenReplacement CopyAsHtml\CopyAsHtml\source.extension.cs 'Version = "([0-9\\.]+)"' 'Version = "{version}"'
 
 build_script:
-  - nuget restore -Verbosity quiet
+  - nuget restore src/ProPowerTools.Open.sln -Verbosity quiet 
   - msbuild /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
 #after_test:
