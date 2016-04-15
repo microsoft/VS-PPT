@@ -1,3 +1,7 @@
+version: 1.0.{build}
+branches:
+  only:
+  - AppVeyorConfig
 image: Visual Studio 2015
 
 install:
@@ -8,8 +12,7 @@ before_build:
   #- ps: Vsix-TokenReplacement CopyAsHtml\CopyAsHtml\source.extension.cs 'Version = "([0-9\\.]+)"' 'Version = "{version}"'
 
 build_script:
-  - nuget restore src/ProPowerTools.Open.sln -Verbosity quiet 
-  - msbuild /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
+  - msbuild src/ProPowerTools.Open.sln /p:configuration=Release /p:DeployExtension=false /p:ZipPackageCompressionLevel=normal /v:m
 
-#after_test:
-#  - ps: Vsix-PushArtifacts | Vsix-PublishToGallery
+after_test:
+  - ps: Vsix-PushArtifacts #| Vsix-PublishToGallery
