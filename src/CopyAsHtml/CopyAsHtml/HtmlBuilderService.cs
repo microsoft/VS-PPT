@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.Composition;
 using CopyAsHtml;
 using EnvDTE;
+using Microsoft.VisualStudio.Language.Intellisense.Utilities;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Text.Editor;
-using Microsoft.VisualStudio.Language.Intellisense.Utilities;
 
 namespace Microsoft.VisualStudio.Text.Formatting.Implementation
 {
