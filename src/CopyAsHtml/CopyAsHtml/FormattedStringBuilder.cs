@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using CopyAsHtml;
-using Microsoft.VisualStudio.Language.Intellisense.Utilities;
 using Microsoft.VisualStudio.Text.Classification;
+using Microsoft.VisualStudio.Language.Intellisense.Utilities;
 
 namespace Microsoft.VisualStudio.Text.Formatting.Implementation
 {
