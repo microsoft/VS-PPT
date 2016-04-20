@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.ComponentModelHost" />
-    <Reference Include="Microsoft.VisualStudio.CoreUtility" />
     <Reference Include="Microsoft.VisualStudio.OLE.Interop">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
@@ -51,34 +50,7 @@
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0">
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.Data">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Text.Logic">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.UI">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TextManager.Interop">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
@@ -93,9 +65,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />

@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.ComponentModelHost" />
     <Reference Include="Microsoft.VisualStudio.CoreUtility" />
     <Reference Include="Microsoft.VisualStudio.Editor" />
     <Reference Include="Microsoft.VisualStudio.Language.Intellisense" />
@@ -48,7 +47,6 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Text.Data" />
     <Reference Include="Microsoft.VisualStudio.Text.Internal" />
-    <Reference Include="Microsoft.VisualStudio.Text.Logic" />
     <Reference Include="Microsoft.VisualStudio.Text.UI" />
     <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf" />
     <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
@@ -61,8 +59,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
@@ -70,9 +66,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
     <Reference Include="EnvDTE" />
-    <Reference Include="EnvDTE80" />
-    <Reference Include="EnvDTE90" />
-    <Reference Include="EnvDTE100" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NativeMethods.cs" />
@@ -132,7 +125,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.mshtml" />
     <COMReference Include="SHDocVw">
       <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
       <VersionMajor>1</VersionMajor>

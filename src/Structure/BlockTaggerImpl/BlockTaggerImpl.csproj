@@ -32,11 +32,6 @@
       <Private>False</Private>
       <HintPath>Roslyn\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.EditorFeatures">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-      <HintPath>Roslyn\Microsoft.CodeAnalysis.EditorFeatures.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeAnalysis.EditorFeatures.Text">
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
@@ -61,14 +56,6 @@
       <SpecificVersion>false</SpecificVersion>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Text.Logic">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.UI">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
@@ -97,18 +84,6 @@
       <SpecificVersion>false</SpecificVersion>
     </Reference>
     <Reference Include="System.Core">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Xml">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>

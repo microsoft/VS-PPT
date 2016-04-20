@@ -61,27 +61,11 @@
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
     <Reference Include="System.ComponentModel.Composition">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
     <Reference Include="System.Core">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="System.Xml">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
