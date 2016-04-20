@@ -37,10 +37,6 @@
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.Logic">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.Text.UI">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
@@ -52,12 +48,8 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
