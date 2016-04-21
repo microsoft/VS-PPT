@@ -42,9 +42,12 @@ namespace FixMixedTabs
                 return null;
 
             IVsExtensionManager manager = _serviceProvider.GetService(typeof(SVsExtensionManager)) as IVsExtensionManager;
+            if (manager == null)
+                return null;
+
             IInstalledExtension extension;
             manager.TryGetInstalledExtension("FixMixedTabs", out extension);
-            if (manager == null || extension != null)
+            if (extension == null)
                 return null;
 
             ITextUndoHistory history;
