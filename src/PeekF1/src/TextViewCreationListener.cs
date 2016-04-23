@@ -14,12 +14,12 @@ namespace Microsoft.VisualStudio.Editor.PeekF1
     internal class TextViewCreationListener : IVsTextViewCreationListener
     {
         [Import(typeof(IVsEditorAdaptersFactoryService))]
-        private IVsEditorAdaptersFactoryService _editorFactory;
+        private IVsEditorAdaptersFactoryService _editorFactory = null;
 
         private ITelemetrySession _telemetrySession;
 
         [Import]
-        private IPeekBroker _peekBroker;
+        private IPeekBroker _peekBroker = null;
 
         public void VsTextViewCreated(IVsTextView textViewAdapter)
         {
