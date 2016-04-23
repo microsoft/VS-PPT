@@ -39,14 +39,14 @@ namespace GoToDef
     internal class UnderlineClassifierProvider : IViewTaggerProvider
     {
         [Import]
-        internal IClassificationTypeRegistryService ClassificationRegistry = null;
+        internal IClassificationTypeRegistryService ClassificationRegistry;
 
         [Import]
-        private SVsServiceProvider _serviceProvider = null;
+        private SVsServiceProvider _serviceProvider;
 
         [Export(typeof(ClassificationTypeDefinition))]
         [Name("UnderlineClassificationProPack")]
-        internal static ClassificationTypeDefinition underlineClassificationType = null;
+        internal static ClassificationTypeDefinition underlineClassificationType;
 
         private static IClassificationType s_underlineClassification;
         public static UnderlineClassifier GetClassifierForView(ITextView view)

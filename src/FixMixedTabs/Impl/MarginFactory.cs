@@ -19,14 +19,14 @@ namespace FixMixedTabs
     {
         [Import]
         private ITextDocumentFactoryService _TextDocumentFactoryService = null;
-        [Import]
 
+        [Import]
         private IEditorOperationsFactoryService _OperationsFactory = null;
-        [Import]
 
+        [Import]
         private ITextUndoHistoryRegistry _UndoHistoryRegistry = null;
-        [Import]
 
+        [Import]
         private SVsServiceProvider _serviceProvider = null;
 
         public IWpfTextViewMargin CreateMargin(IWpfTextViewHost textViewHost, IWpfTextViewMargin containerMargin)

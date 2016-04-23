@@ -33,12 +33,12 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
 
         private static readonly TimeSpan s_tipReportingDelay = TimeSpan.FromSeconds(3.0);
         private static readonly TimeSpan s_tipClearingDelay = TimeSpan.FromSeconds(1.0);
-        private static bool s_logged = false;
-        private static string s_lastKey = null;
+        private static bool s_logged;
+        private static string s_lastKey;
         private static DateTime s_lastTimeChanged = DateTime.MaxValue;
 
         private static TimeSpan s_elapsedTime = TimeSpan.Zero;
-        private static ITelemetrySession s_telemetrySession = null;
+        private static ITelemetrySession s_telemetrySession;
 
         /// <summary>
         /// Constructor for the StructureMarginElement.

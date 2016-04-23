@@ -20,7 +20,7 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
     {
 #pragma warning disable 649
         [Import]
-        internal IEditorFormatMapService EditorFormatMapService = null;
+        internal IEditorFormatMapService EditorFormatMapService;
 
         [Export]
         [Name("MatchMarginAdornmentLayer")]

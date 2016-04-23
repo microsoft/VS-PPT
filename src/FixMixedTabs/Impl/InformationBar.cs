@@ -18,7 +18,7 @@ namespace FixMixedTabs
         private ITextUndoHistory _undoHistory;
 
         private bool _isClosed = true;
-        private bool _dontShowAgain = false;
+        private bool _dontShowAgain;
         private readonly ITelemetrySession _telemetrySession;
 
         public InformationBarMargin(IWpfTextView textView, ITextDocument document, IEditorOperations editorOperations, ITextUndoHistory undoHistory)
@@ -265,7 +265,7 @@ namespace FixMixedTabs
 
         public ITextViewMargin GetTextViewMargin(string marginName)
         {
-            return (marginName == InformationBarMargin.MarginName) ? (IWpfTextViewMargin)this : null;
+            return marginName == MarginName ? this : null;
         }
 
         public void Dispose()

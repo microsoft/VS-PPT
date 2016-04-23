@@ -103,8 +103,8 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
 
         private class SnapshotFilter : QuoteFilter
         {
-            private bool _eos = false;
-            private int _braceDepth = 0;
+            private bool _eos;
+            private int _braceDepth;
             private Stack<int> _nestedBraceDepth = new Stack<int>();
 
             public SnapshotFilter(ITextSnapshot snapshot)
@@ -164,7 +164,7 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
         private class QuoteFilter : BaseFilter
         {
             private char _quote = ' ';
-            private bool _escape = false;
+            private bool _escape;
 
             public QuoteFilter(ITextSnapshot snapshot)
                 : base(snapshot)
@@ -285,8 +285,8 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
         {
             int index = text.IndexOf(p, StringComparison.Ordinal);
             return (index >= 0) &&
-                   ((index == 0) || (!char.IsLetterOrDigit(text[index - 1]))) &&
-                   ((index + p.Length == text.Length) || (!char.IsLetterOrDigit(text[index + p.Length])));
+                   ((index == 0) || !char.IsLetterOrDigit(text[index - 1])) &&
+                   ((index + p.Length == text.Length) || !char.IsLetterOrDigit(text[index + p.Length]));
         }
     }
 }
