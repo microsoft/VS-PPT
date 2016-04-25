@@ -35,7 +35,7 @@ namespace GoToDef
 
             IInstalledExtension extension;
             manager.TryGetInstalledExtension("GoToDef", out extension);
-            if (extension == null)
+            if (extension != null)
                 return null;
 
             return view.Properties.GetOrCreateSingletonProperty(typeof(GoToDefKeyProcessor),
