@@ -66,9 +66,12 @@ namespace GoToDef
                 return null;
 
             IVsExtensionManager manager = _serviceProvider.GetService(typeof(SVsExtensionManager)) as IVsExtensionManager;
+            if (manager == null)
+                return null;
+
             IInstalledExtension extension;
             manager.TryGetInstalledExtension("GoToDef", out extension);
-            if (manager == null || extension != null)
+            if (extension != null)
                 return null;
 
             return GetClassifierForView(textView) as ITagger<T>;

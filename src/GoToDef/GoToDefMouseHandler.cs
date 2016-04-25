@@ -30,9 +30,12 @@ namespace GoToDef
         public KeyProcessor GetAssociatedProcessor(IWpfTextView view)
         {
             IVsExtensionManager manager = _serviceProvider.GetService(typeof(SVsExtensionManager)) as IVsExtensionManager;
+            if (manager == null)
+                return null;
+
             IInstalledExtension extension;
             manager.TryGetInstalledExtension("GoToDef", out extension);
-            if (manager == null || extension != null)
+            if (extension != null)
                 return null;
 
             return view.Properties.GetOrCreateSingletonProperty(typeof(GoToDefKeyProcessor),
@@ -148,9 +151,12 @@ namespace GoToDef
 
             ITelemetrySession telemetrySession = TelemetrySessionForPPT.Create(typeof(GoToDefMouseHandler).Assembly);
             IVsExtensionManager manager = _globalServiceProvider.GetService(typeof(SVsExtensionManager)) as IVsExtensionManager;
+            if (manager == null)
+                return null;
+
             IInstalledExtension extension;
             manager.TryGetInstalledExtension("GoToDef", out extension);
-            if (manager == null || extension != null)
+            if (extension != null)
                 return null;
 
             return new GoToDefMouseHandler(view,
