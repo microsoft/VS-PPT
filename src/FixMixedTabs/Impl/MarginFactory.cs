@@ -47,7 +47,7 @@ namespace FixMixedTabs
 
             IInstalledExtension extension;
             manager.TryGetInstalledExtension("FixMixedTabs", out extension);
-            if (extension == null)
+            if (extension != null)
                 return null;
 
             ITextUndoHistory history;
