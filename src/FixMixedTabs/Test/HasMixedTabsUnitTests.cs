@@ -3,7 +3,7 @@ using Xunit;
 
 namespace FixMixedTabsUnitTests
 {
-        public class HasMixedTabsUnitTests
+    public class HasMixedTabsUnitTests
     {
         [Fact]
         public void TabThen4SpacesTest()

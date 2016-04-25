@@ -5,7 +5,7 @@ using Xunit;
 
 namespace CopyAsHtmlTest
 {
-        public class FormattedStringBuilderTests
+    public class FormattedStringBuilderTests
     {
         [Fact]
         public void FormattedStringBuilderEndToEnd1()
@@ -24,7 +24,7 @@ namespace CopyAsHtmlTest
                 waitIndicator: null);
 
             var snapshot = new MockTextSnapshot("bla");
-            var spans = new NormalizedSnapshotSpanCollection(new []
+            var spans = new NormalizedSnapshotSpanCollection(new[]
             {
                 new SnapshotSpan(snapshot, 0, 3)
             });

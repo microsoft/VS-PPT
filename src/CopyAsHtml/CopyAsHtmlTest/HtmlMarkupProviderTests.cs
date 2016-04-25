@@ -4,7 +4,7 @@ using Xunit;
 
 namespace CopyAsHtmlTest
 {
-        public class HtmlMarkupProviderTests
+    public class HtmlMarkupProviderTests
     {
         [Fact]
         public void CalculateLongestCommonWhitespacePrefix()

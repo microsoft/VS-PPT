@@ -1,4 +1,5 @@
-﻿namespace Microsoft.VisualStudio.TelemetryForPPT
+﻿
+namespace Microsoft.VisualStudio.TelemetryForPPT
 {
     /// <summary>
     /// Default, dummy <see cref="ITelemetryActivity"/> implementation.

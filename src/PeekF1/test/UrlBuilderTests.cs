@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Microsoft.VisualStudio.PeekF1Tests
 {
-        public class UrlBuilderTests
+    public class UrlBuilderTests
     {
         [Fact]
         public void TestDefault()
