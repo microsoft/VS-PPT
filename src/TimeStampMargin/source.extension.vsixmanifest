@@ -6,7 +6,7 @@
     <Description xml:space="preserve">This extension adds a time stamp margin to the debug output window.</Description>
   </Metadata>
   <Installation>
-    <InstallationTarget Version="[11.0,15.0)" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,15.0]" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
