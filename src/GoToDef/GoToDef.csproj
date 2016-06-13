@@ -26,6 +26,9 @@
     <SccProvider />
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(RazzleBuild)'=='true'">
+    <WarningsNotAsErrors>649</WarningsNotAsErrors>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(RazzleBuild)' == '' and '$(ProPowerToolsPackage)' == ''">
     <!-- We only want to deploy the package if we're being built in Visual Studio (not in Razzle),
          and if we're being built standalone (not as a part of the Pro Power Tools package). -->
