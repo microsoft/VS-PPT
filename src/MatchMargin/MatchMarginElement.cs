@@ -330,6 +330,14 @@ namespace Microsoft.VisualStudio.PowerTools.MatchMargin
                                 if (!rightCharacter.HasValue)
                                     rightCharacter = line.End;
 
+                                if (leftCharacter.Value.Position > rightCharacter.Value.Position)
+                                {
+                                    // Swap left & right (due to bidi sequences, we could end up with left coming after right in the buffer)
+                                    var t = leftCharacter;
+                                    leftCharacter = rightCharacter;
+                                    rightCharacter = t;
+                                }
+
                                 //We know the start & endpoints exist, the edit & visual snapshots represent the same instant and we're mapping up so just map up
                                 SnapshotPoint leftInVisualBuffer = _textView.TextViewModel.GetNearestPointInVisualSnapshot(leftCharacter.Value, _textView.VisualSnapshot, PointTrackingMode.Negative);
                                 SnapshotPoint rightInVisualBuffer = _textView.TextViewModel.GetNearestPointInVisualSnapshot(rightCharacter.Value, _textView.VisualSnapshot, PointTrackingMode.Negative);
