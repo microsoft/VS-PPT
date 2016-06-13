@@ -132,8 +132,10 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
 
                 ClipboardSupport.SetClipboardData(html, rtf, text, singleLineOperation, isBoxCopy);
 
-                _telemetrySession.PostEvent("VS/PPT-CopyAsHTML/Invoked", "VS.PPT-CopyAsHTML.Invoked.IsCopyHtmlMarkup", isCopyHtmlMarkup, "VS.PPT-CopyAsHTML.Invoked.IsCopy", isCopy,
-                    "VS.PPT-CopyAsHTML.Invoked.IsCut", isCut, "VS.PPT-CopyAsHTML.Invoked.IsLineCut", isLineCut, "VS.PPT-CopyAsHTML.Invoked.IsBoxCopy", isBoxCopy);
+                if (isCopyHtmlMarkup)
+                {
+                    _telemetrySession.PostEvent("VS/PPT-CopyAsHTML/Invoked");
+                }
 
                 return VSConstants.S_OK;
             }
