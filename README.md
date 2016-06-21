@@ -20,3 +20,7 @@ Install the latest official build of Productivity Power Tools for Visual Studio 
 
 * [How to Contribute](https://github.com/Microsoft/VS-PPT/blob/master/CONTRIBUTING.md)
 * [Pull requests](https://github.com/Microsoft/VS-PPT/pulls): [Open](https://github.com/Microsoft/VS-PPT/pulls?q=is%3Aopen+is%3Apr)/[Closed](https://github.com/Microsoft/VS-PPT/pulls?q=is%3Apr+is%3Aclosed)
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
