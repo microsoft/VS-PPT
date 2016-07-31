@@ -198,11 +198,12 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
         private bool TryAsProperty(SyntaxNode childnode, ref BlockType type, ref int startPosition, ref int endPosition)
         {
             var child = childnode as PropertyDeclarationSyntax;
-            if (child != null)
+            var accessorList = child?.AccessorList;
+            if (accessorList != null)
             {
                 type = BlockType.Method;
-                startPosition = child.AccessorList.OpenBraceToken.SpanStart;
-                endPosition = child.AccessorList.CloseBraceToken.Span.End;
+                startPosition = accessorList.OpenBraceToken.SpanStart;
+                endPosition = accessorList.CloseBraceToken.Span.End;
 
                 return true;
             }
