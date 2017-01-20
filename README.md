@@ -24,3 +24,25 @@ Install the latest official build of Productivity Power Tools for Visual Studio 
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+# Productivity Power Tools VS2017
+
+For Visual Studio 2017, the individual components of Productivity Power Tools have been broken into separate extensions.
+You can download them here:
+
+* [Align Assignments](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.AlignAssignments)
+* [Copy As Html](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CopyAsHtml)
+* [Ctrl+Click GoTo Definition](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CtrlClickGoToDefinition)
+* [Custom Document Well](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomDocumentWell)
+* [Double-Click Maximize](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.Double-ClickMaximize)
+* [Editor Guidelines](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.EditorGuidelines)
+* [Fix Mixed Tabs](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.FixMixedTabs)
+* [Match Margin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MatchMargin)
+* [Middle-Click Scroll](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MiddleClickScroll)
+* [Peek Help](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.PeekHelp)
+* [Quick Launch Tasks](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.QuickLaunchTasks)
+* [Solution Error Visualizer](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.SolutionErrorVisualizer)
+* [Power Commands for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.PowerCommandsforVisualStudio)
+* [Syntactic Line Compression](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.SyntacticLineCompression)
+* [Time Stamp Margin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.TimeStampMargin)
+* [PPT Options Page](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProductivityPowerToolsOptionsPage)
+
