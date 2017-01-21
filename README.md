@@ -42,7 +42,7 @@ You can download them here:
 * [Quick Launch Tasks](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.QuickLaunchTasks)
 * [Solution Error Visualizer](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.SolutionErrorVisualizer)
 * [Power Commands for Visual Studio](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.PowerCommandsforVisualStudio)
-* [Syntactic Line Compression](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.SyntacticLineCompression)
+* [Shrink Empty Lines](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.SyntacticLineCompression)
 * [Time Stamp Margin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.TimeStampMargin)
 * [PPT Options Page](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProductivityPowerToolsOptionsPage)
 
