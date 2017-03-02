@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio;
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.ExtensionManager;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
@@ -224,7 +224,11 @@ namespace GoToDef
 
         public override void PostprocessMouseLeftButtonDown(MouseButtonEventArgs e)
         {
-            _mouseDownAnchorPoint = RelativeToView(e.GetPosition(_view.VisualElement));
+            //register the mouse down only if control is being pressed
+            if (_state.Enabled)
+            {
+                _mouseDownAnchorPoint = RelativeToView(e.GetPosition(_view.VisualElement));
+            }
         }
 
         public override void PreprocessMouseMove(MouseEventArgs e)
@@ -248,7 +252,8 @@ namespace GoToDef
         private bool InDragOperation(Point anchorPoint, Point currentPoint)
         {
             // If the mouse up is more than a drag away from the mouse down, this is a drag 
-            return Math.Abs(anchorPoint.X - currentPoint.X) >= SystemParameters.MinimumHorizontalDragDistance &&
+            //the drag can happen also on the same row so just one of these condition should make the movement a drag
+            return Math.Abs(anchorPoint.X - currentPoint.X) >= SystemParameters.MinimumHorizontalDragDistance ||
                    Math.Abs(anchorPoint.Y - currentPoint.Y) >= SystemParameters.MinimumVerticalDragDistance;
         }
 
