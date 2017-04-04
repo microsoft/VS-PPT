@@ -1,25 +1,24 @@
 ﻿using Microsoft.VisualStudio.Editor.PeekF1;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using Xunit;
 
 namespace Microsoft.VisualStudio.PeekF1Tests
 {
-    [TestClass]
     public class UrlBuilderTests
     {
-        [TestMethod]
+        [Fact]
         public void TestDefault()
         {
             // default culture is en-US
             string expected = HelpUrlBuilder.HelpUrlPrefix + "en-US" + HelpUrlBuilder.HelpUrlSuffix;
 
             string actual = HelpUrlBuilder.Build(new Dictionary<string, string[]>());
-            Assert.AreEqual(expected, actual, ignoreCase: true);
-            Assert.IsTrue(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
+            Assert.Equal(expected, actual, ignoreCase: true);
+            Assert.True(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestKeyword()
         {
             { // test one keyword
@@ -32,8 +31,8 @@ namespace Microsoft.VisualStudio.PeekF1Tests
                     { "keyword", new[] { keyword } }
                 });
 
-                Assert.AreEqual(expected, actual, ignoreCase: true);
-                Assert.IsTrue(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
+                Assert.Equal(expected, actual, ignoreCase: true);
+                Assert.True(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
             }
 
             { // test multiple keywords
@@ -50,12 +49,12 @@ namespace Microsoft.VisualStudio.PeekF1Tests
                     { "keyword", keywords }
                 });
 
-                Assert.AreEqual(expected, actual, ignoreCase: true);
-                Assert.IsTrue(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
+                Assert.Equal(expected, actual, ignoreCase: true);
+                Assert.True(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void TestDevLang()
         {
             string expected = string.Format(HelpUrlBuilder.HelpUrlPrefix + "en-US;k(DevLang-{0})" + HelpUrlBuilder.HelpUrlSuffix,
@@ -66,11 +65,11 @@ namespace Microsoft.VisualStudio.PeekF1Tests
                 { "devlang", new[] { "csharp" } }
             });
 
-            Assert.AreEqual(expected, actual, ignoreCase: true);
-            Assert.IsTrue(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
+            Assert.Equal(expected, actual, ignoreCase: true);
+            Assert.True(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
         }
 
-        [TestMethod]
+        [Fact]
         public void TestFrameworkMoniker()
         {
             string expected = string.Format(HelpUrlBuilder.HelpUrlPrefix + "en-US;k(TargetFrameworkMoniker-{0})" + HelpUrlBuilder.HelpUrlSuffix,
@@ -81,8 +80,8 @@ namespace Microsoft.VisualStudio.PeekF1Tests
                 { "TargetFrameworkMoniker", new[] { ".NETFramework,Version=v4.5.2" } }
             });
 
-            Assert.AreEqual(expected, actual, ignoreCase: true);
-            Assert.IsTrue(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
+            Assert.Equal(expected, actual, ignoreCase: true);
+            Assert.True(Uri.IsWellFormedUriString(actual, UriKind.Absolute));
         }
     }
 }

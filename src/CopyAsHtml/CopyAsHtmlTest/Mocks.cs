@@ -19,8 +19,8 @@ namespace CopyAsHtmlTest
                 {
                     new ClassificationSpan(
                         new SnapshotSpan(
-                            span.Snapshot, 
-                            new Span(1, 1)), 
+                            span.Snapshot,
+                            new Span(1, 1)),
                             new MockClassificationType("keyword"))
                 };
         }
@@ -115,26 +115,25 @@ namespace CopyAsHtmlTest
 
     public class MockClassificationType : IClassificationType
     {
-        private string text;
+        private string _text;
 
         public MockClassificationType()
             : this("text")
         {
-
         }
 
-        static MockClassificationType _default = new MockClassificationType();
+        private static MockClassificationType s_default = new MockClassificationType();
         public static MockClassificationType Default
         {
             get
             {
-                return _default;
+                return s_default;
             }
         }
 
         public MockClassificationType(string classificationTypeText)
         {
-            this.text = classificationTypeText;
+            _text = classificationTypeText;
         }
 
         public IEnumerable<IClassificationType> BaseTypes
@@ -144,12 +143,12 @@ namespace CopyAsHtmlTest
 
         public string Classification
         {
-            get { return text; }
+            get { return _text; }
         }
 
         public bool IsOfType(string type)
         {
-            return type == text;
+            return type == _text;
         }
     }
 

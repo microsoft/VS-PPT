@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.Text.Formatting.Implementation;
+using Xunit;
 
 namespace CopyAsHtmlTest
 {
-    [TestClass]
     public class HtmlMarkupProviderTests
     {
-        [TestMethod]
+        [Fact]
         public void CalculateLongestCommonWhitespacePrefix()
         {
             var samples = new Dictionary<string, int>
@@ -24,11 +23,11 @@ namespace CopyAsHtmlTest
             foreach (var sample in samples)
             {
                 var actual = HtmlMarkupProvider.CalculateLongestCommonWhitespacePrefix(sample.Key) ?? string.Empty;
-                Assert.AreEqual(sample.Value, actual.Length);
+                Assert.Equal(sample.Value, actual.Length);
             }
         }
 
-        [TestMethod]
+        [Fact]
         public void UnindentToRemoveLeadingWhitespace()
         {
             var samples = new Dictionary<string, string>
@@ -46,7 +45,7 @@ namespace CopyAsHtmlTest
             foreach (var sample in samples)
             {
                 var actual = HtmlMarkupProvider.UnindentToRemoveLeadingWhitespace(sample.Key);
-                Assert.AreEqual(sample.Value, actual);
+                Assert.Equal(sample.Value, actual);
             }
         }
     }
