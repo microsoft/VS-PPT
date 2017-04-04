@@ -3,7 +3,7 @@
 
 Productivity Power Tools is a set of Visual Studio extensions improving developer productivity.
 
-###Install Productivity Power Tools
+### Install Productivity Power Tools
 Install the latest official build of Productivity Power Tools for Visual Studio 2015 from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d).
 
 ### Source code
