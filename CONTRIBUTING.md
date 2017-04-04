@@ -22,7 +22,7 @@ If you haven't already done so, you'll need to sign the [Microsoft Contributor L
 2. Both members of the Visual Studio PPT team and external contributors are expected to do their work in a local fork and submit code for consideration via a pull request.
 3. When the pull request process deems the change ready it will be merged directly into the tree.
 
-#Creating New Issues
+# Creating New Issues
 Please follow these guidelines when creating new issues in the issue tracker:
 * Use a descriptive title that identifies the issue to be addressed or the requested feature.
 * Do not set any bug fields other than Impact.
@@ -42,9 +42,9 @@ if (argument == null)
     throw new ArgumentNullException(nameof(argument));
 }
 ```
-*Use ```Debug.Assert()``` for checks not needed in retail builds. Always include a “message” string in your assert to identify failure conditions. Add assertions to document assumptions on non-local program state or parameter values.
+* Use ```Debug.Assert()``` for checks not needed in retail builds. Always include a “message” string in your assert to identify failure conditions. Add assertions to document assumptions on non-local program state or parameter values.
 
-#Code Formatter
+# Code Formatter
 The PPT team regularly runs the [.NET code formatter tool](https://github.com/dotnet/codeformatter) to ensure the code base maintains a consistent style over time. 
 
 
