@@ -28,12 +28,11 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 For Visual Studio 2017, the individual components of Productivity Power Tools have been broken into separate extensions.
 You can download them here:
-
-* [Align Assignments](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.AlignAssignments)
-* [Copy As Html](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CopyAsHtml)
-* [Ctrl+Click GoTo Definition](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CtrlClickGoToDefinition)
-* [Custom Document Well](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.CustomDocumentWell)
-* [Double-Click Maximize](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.Double-ClickMaximize)
+* [Align Assignments](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.AlignAssignments)
+* [Copy As Html](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.CopyAsHtml)
+* [Ctrl+Click GoTo Definition](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.CtrlClickGoToDefinition)
+* [Custom Document Well](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.CustomDocumentWell)
+* [Double-Click Maximize](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.Double-ClickMaximize)
 * [Editor Guidelines](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.EditorGuidelines)
 * [Fix Mixed Tabs](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.FixMixedTabs)
 * [Match Margin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MatchMargin)
