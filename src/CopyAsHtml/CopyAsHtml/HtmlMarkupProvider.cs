@@ -329,7 +329,7 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
             string currentSize = GetFontSize(properties);
             if (!string.IsNullOrEmpty(currentSize))
             {
-                styles.Add("font-size", currentSize);
+                styles.Add("font-size", currentSize + "px");
             }
 
             var fontStyle = GetFontStyle(properties);
