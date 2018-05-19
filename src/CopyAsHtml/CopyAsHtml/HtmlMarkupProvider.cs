@@ -329,7 +329,7 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
             string currentSize = GetFontSize(properties);
             if (!string.IsNullOrEmpty(currentSize))
             {
-                styles.Add("font-size", currentSize + "px");
+                styles.Add("font-size", currentSize);
             }
 
             var fontStyle = GetFontStyle(properties);
@@ -381,9 +381,12 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
             return style;
         }
 
+        /// <summary>
+        /// Get string representation of Font Size in DIPs (Device Independent Pixels). Eg: "12px".
+        /// </summary>
         private static string GetFontSize(TextRunProperties properties)
         {
-            return ((int)properties.FontRenderingEmSize).ToString();
+            return ((int)properties.FontRenderingEmSize).ToString() + "px";
         }
 
         private string GetFontFamily(TextRunProperties properties)
