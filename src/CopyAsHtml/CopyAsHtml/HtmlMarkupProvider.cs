@@ -382,7 +382,7 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
         }
 
         /// <summary>
-        /// Get string representation of Font Size in DIPs (Device Independent Pixels). Eg: "12px".
+        /// Gets string representation of Font Size in DIPs (Device Independent Pixels). Eg: "12px".
         /// </summary>
         private static string GetFontSize(TextRunProperties properties)
         {
