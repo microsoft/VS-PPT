@@ -97,19 +97,8 @@ namespace Microsoft.VisualStudio.Text.Formatting.Implementation
             _stringBuilder.Append(text);
         }
 
-
         private IList<ClassificationSpan> GetClassificationSpansSync(SnapshotSpan parentSpan)
         {
-            IAccurateClassifier accurateClassifier = _classifier as IAccurateClassifier;
-
-            if (accurateClassifier != null && _waitIndicator != null)
-            {
-                using (var waitContext = WaitHelper.Wait(_waitIndicator, "HTML Copy", "Formatting document for copying"))
-                {
-                    return accurateClassifier.GetAllClassificationSpans(parentSpan, waitContext.CancellationToken);
-                }
-            }
-
             return _classifier.GetClassificationSpans(parentSpan);
         }
 
