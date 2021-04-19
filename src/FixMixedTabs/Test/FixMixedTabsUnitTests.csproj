@@ -67,12 +67,6 @@
     <Compile Include="HasMixedTabsUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Impl\FixMixedTabs.csproj">
-      <Project>{0e19e9ea-6af0-48ff-bab7-b1eb6754239b}</Project>
-      <Name>FixMixedTabs</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <Choose>
