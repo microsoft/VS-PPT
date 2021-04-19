@@ -58,6 +58,7 @@ namespace Microsoft.VisualStudio.TelemetryForPPT
 
         public static ITelemetrySession Create(Assembly callingAssembly)
         {
+            ThreadHelper.ThrowIfNotOnUIThread();
             return s_instance.TelemetrySessionFactory.CreateSession(callingAssembly);
         }
     }
