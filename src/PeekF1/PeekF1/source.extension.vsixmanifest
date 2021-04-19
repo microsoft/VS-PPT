@@ -4,9 +4,10 @@
         <Identity Id="1b797723-54ad-4029-ac39-fab88b204891" Version="1.0" Language="en-US" Publisher="Microsoft" />
         <DisplayName>PeekF1</DisplayName>
         <Description>Adds a command to Visual Studio to show F1 Help inline in the editor. By default the command is bound to Alt+F1.</Description>
+        <Icon>PeekF1_icon_90x.png</Icon>
     </Metadata>
     <Installation InstalledByMsi="false">
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,15.0]" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,17.0)" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />

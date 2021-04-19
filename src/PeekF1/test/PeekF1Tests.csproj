@@ -56,12 +56,6 @@
     <Compile Include="UrlBuilderTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\PeekF1.csproj">
-      <Project>{619b53f8-d9a0-4f86-b785-77ea6428366e}</Project>
-      <Name>PeekF1</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <Choose>

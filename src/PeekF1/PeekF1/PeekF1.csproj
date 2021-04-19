@@ -45,61 +45,9 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="ClippableWindowsFormsHost.cs" />
-    <Compile Include="CommandFilter.cs" />
-    <Compile Include="HelpUrlBuilder.cs" />
-    <Compile Include="Peek\F1PeekableItem.cs" />
-    <Compile Include="Peek\F1PeekableItemSource.cs" />
-    <Compile Include="Peek\F1PeekableItemSourceProvider.cs" />
-    <Compile Include="Peek\F1PeekPresentationControl.xaml.cs">
-      <DependentUpon>Peek\F1PeekPresentationControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Peek\F1PeekResult.cs" />
-    <Compile Include="Peek\F1PeekResultPresentation.cs" />
-    <Compile Include="Peek\F1PeekResultPresenter.cs" />
-    <Compile Include="Peek\F1PeekResultScrollState.cs" />
-    <Compile Include="Peek\F1PeekResultSource.cs" />
-    <Compile Include="Peek\PeekHelpRelationship.cs" />
-    <Compile Include="Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="PeekF1Package.cs" />
-    <Compile Include="TextViewCreationListener.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VSPackage.resx">
-      <MergeWithCTO>true</MergeWithCTO>
-      <ManifestResourceName>VSPackage</ManifestResourceName>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <VSCTCompile Include="PeekF1.vsct">
-      <ResourceName>Menus.ctmenu</ResourceName>
-      <SubType>Designer</SubType>
-    </VSCTCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\Package.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Peek\F1PeekPresentationControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="SHDocVw">
@@ -118,6 +66,15 @@
       <Name>TelemetryForPPT</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\SharedFiles\PeekF1.vsct">
+      <Link>PeekF1.vsct</Link>
+    </Content>
+    <Resource Include="..\SharedFiles\Resources\Package.ico">
+      <Link>Resources\Package.ico</Link>
+    </Resource>
+  </ItemGroup>
+  <Import Project="..\PeekF1Shared\PeekF1Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
