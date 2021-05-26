@@ -67,9 +67,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\SharedFiles\PeekF1.vsct">
+    <VSCTCompile Include="..\SharedFiles\PeekF1.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
       <Link>PeekF1.vsct</Link>
-    </Content>
+    </VSCTCompile>
     <Resource Include="..\SharedFiles\Resources\Package.ico">
       <Link>Resources\Package.ico</Link>
     </Resource>

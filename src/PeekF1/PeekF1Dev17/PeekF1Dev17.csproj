@@ -29,9 +29,9 @@
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.0-preview-1-31209-1111" />
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.0-previews-1-31314-256" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools">
-      <Version>17.0.63-dev17-g3f11f5ab</Version>
+      <Version>17.0.1606-preview1</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -70,9 +70,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\SharedFiles\PeekF1.vsct">
+    <VSCTCompile Include="..\SharedFiles\PeekF1.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
       <Link>PeekF1.vsct</Link>
-    </Content>
+    </VSCTCompile>
     <Resource Include="..\SharedFiles\Resources\Package.ico">
       <Link>Resources\Package.ico</Link>
     </Resource>
