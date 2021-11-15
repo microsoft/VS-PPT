@@ -7,6 +7,7 @@
     <Border BorderBrush="Silver" BorderThickness="0,0,0,2">
         <DockPanel Background="Gainsboro" LastChildFill="False">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" DockPanel.Dock="Right">
+                <Button Name="Fix" Margin="5,0,0,0" Width="65" Height="22" Visibility="Collapsed">Fix</Button>
                 <Button Name="Tabify" Margin="5,0,0,0" Width="65" Height="22">Tabify</Button>
                 <Button Name="Untabify" Margin="5,0,0,0" Width="65" Height="22">Untabify</Button>
                 <Border Padding="15,0,0,0" />
