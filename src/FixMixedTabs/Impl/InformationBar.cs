@@ -31,6 +31,7 @@ namespace FixMixedTabs
             _telemetrySession = TelemetrySessionForPPT.Create(this.GetType().Assembly);
 
             var informationBar = new InformationBarControl();
+            informationBar.Fix.Click += Fix;
             informationBar.Tabify.Click += Tabify;
             informationBar.Untabify.Click += Untabify;
             informationBar.Hide.Click += Hide;
@@ -145,8 +146,23 @@ namespace FixMixedTabs
             if ((!_isClosed) || _dontShowAgain)
                 return;
 
-            _isClosed = false;
-            ChangeHeightTo(27, false);
+            if (this.Content is InformationBarControl informationBar)
+            {
+                if (_textView.Options.IsOptionDefined<bool>(DefaultOptions.ConvertTabsToSpacesOptionId, false) == true)
+                {
+                    informationBar.Fix.Visibility = Visibility.Visible;
+                    informationBar.Tabify.Visibility = Visibility.Collapsed;
+                    informationBar.Untabify.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    informationBar.Fix.Visibility = Visibility.Collapsed;
+                    informationBar.Tabify.Visibility = Visibility.Visible;
+                    informationBar.Untabify.Visibility = Visibility.Visible;
+                }
+                _isClosed = false;
+                ChangeHeightTo(27, false);
+            }
         }
 
         private void ChangeHeightTo(double newHeight, bool instant)
@@ -203,6 +219,28 @@ namespace FixMixedTabs
                 _telemetrySession.PostEvent("VS/PPT-FixMixedTabs/Untabify");
             }
         }
+
+        private void Fix(object sender, RoutedEventArgs e)
+        {
+            if (_textView != null)
+            {
+                Func<bool> action = _operations.Untabify;
+                if (!_textView.Options.GetOptionValue<bool>(DefaultOptions.ConvertTabsToSpacesOptionId))
+                {
+                    action = _operations.Tabify;
+                }
+                PerformActionInUndo(() =>
+                {
+                    _operations.SelectAll();
+                    action();
+                });
+
+                this.CloseInformationBar(false);
+
+                _telemetrySession.PostEvent("VS/PPT-FixMixedTabs/Fix");
+            }
+        }
+
 
         private void PerformActionInUndo(Action action)
         {
