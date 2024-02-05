@@ -44,4 +44,5 @@ You can download them here:
 * [Shrink Empty Lines](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.SyntacticLineCompression)
 * [Time Stamp Margin](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.TimeStampMargin)
 * [PPT Options Page](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProductivityPowerToolsOptionsPage)
+* [Pieces](https://pieces.app/) — An on-device copilot that helps you capture, enrich, and reuse code, streamline collaboration, and solve complex problems through a contextual understanding of your workflow.
 
